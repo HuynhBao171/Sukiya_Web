@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!-- Basic -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Site Metas -->
+    <title>Yamifood Restaurant - Responsive HTML5 Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="~/Content/User/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Content/User/images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <!-- Site CSS -->
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <!-- Responsive CSS -->
+    <!--<link rel="stylesheet" href="css/responsive.css">-->
+    <!-- Custom CSS -->
+    <!--<link rel="stylesheet" href="css/custom.css">-->
+    <link href="~/Content/User/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/User/css/style.css" rel="stylesheet" />
+    <link href="~/Content/User/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/User/css/custom.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Start header -->
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" >
+                    <img src="~/Content/User/images/logo.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home",new { area = "" })">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area =""})">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Admin</a></li>
+                        <a href="@Url.Action("Index","ShoppingCart")"><strong>Cart</strong> <span id="cart-status" class="badge">@ViewBag.CartCount </span></a>
+                        @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Register</a></li>*@
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    @RenderBody()
+    <div class="contact-imfo-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fa fa-volume-control-phone"></i>
+                    <div class="overflow-hidden">
+                        <h4>Phone</h4>
+                        <p class="lead">
+                            +84 123-456-4590
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-envelope"></i>
+                    <div class="overflow-hidden">
+                        <h4>Email</h4>
+                        <p class="lead">
+                            hungchan@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa fa-map-marker"></i>
+                    <div class="overflow-hidden">
+                        <h4>Location</h4>
+                        <p class="lead">
+                            224C Pasteur, Phường 6, Quận 3, Thành phố Hồ Chí Minh
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact info -->
+    <!-- Start Footer -->
+    <footer class="footer-area bg-f">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3>Thông tin về SUKIYA</h3>
+                    <p>Sukiya là chuỗi nhà hàng thức ăn nhanh số 1 Nhật Bản, nơi cung cấp những bữa ăn ngon với giá cả phải chăng và dịch vụ tuyệt vời. Chúng tôi thành lập cửa hàng đầu tiên tại Nhật Bản vào năm 1982. Mỗi cửa hàng của chúng tôi kể câu chuyện về sự kết hợp giữa hiện đại với truyền thống, được lựa chọn để tạo ra một trải nghiệm độc đáo. Hiện tại Sukiya có hơn 2500 chi nhánh tại Nhật Bản và trên toàn thế giới (Tính đến tháng 11 năm 2019)</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Giờ mở cửa</h3>
+                    <p><span class="text-color">Monday: </span>Closed</p>
+                    <p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
+                    <p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
+                    <p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Thông tin liên hệ</h3>
+                    <p class="lead">224C Pasteur, Phường 6, Quận 3, Thành phố Hồ Chí Minh</p>
+                    <p class="lead"><a href="#">+84 2000 800 9999</a></p>
+                    <p><a href="#"> hungchan@admin.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3>Subscribe</h3>
+                    <div class="subscribe_form">
+                        <form class="subscribe_form">
+                            <input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
+                            <button type="submit" class="submit">SUBSCRIBE</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    <ul class="list-inline f-social">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/sukiyavn"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="company-name">
+                            All Rights Reserved. &copy; 2023 <a href="#">Yamifood Restaurant</a> Design By :
+                            <a href="https://html.design/">html design</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/~/Content/User/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
