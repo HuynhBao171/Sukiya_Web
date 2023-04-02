@@ -10,10 +10,11 @@
     @using (Html.BeginForm("Search", "Mons", FormMethod.Get))
 
     {
-        <input type="text" name="searchString" placeholder="Tìm kiếm Mon" />
+        <input type="text" name="searchString" placeholder="Tìm kiếm Món" />
         <input type="submit" value="Tìm Kiếm" />
     }
 </p>
+
 @*<table class="table">
     <tr>
         <th>
@@ -34,7 +35,7 @@
         <th></th>
     </tr>*@
 
-    @*@foreach (var item in Model)
+@*@foreach (var item in Model)
     {
         <tr>
             <td>
@@ -67,6 +68,19 @@
 
 
 <div class="row">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>
+        @using (Html.BeginForm("Search", "Mons", FormMethod.Get))
+
+        {
+            <input type="text" name="searchString" placeholder="Tìm kiếm Món" />
+            <input type="submit" value="Tìm Kiếm" />
+        }
+    </p>
     @foreach (var item in Model)
     {
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">

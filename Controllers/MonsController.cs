@@ -40,7 +40,7 @@ namespace Sukiya.Controllers
             var context = new FoodModelContext();
             var firstBook = context.Mon.FirstOrDefault(p => p.MaMon == id);
             if (firstBook == null)
-                return HttpNotFound("Không tìm thấy mã sách này!");
+                return HttpNotFound("Không tìm thấy mã món này!");
             return View(firstBook);
         }
         public ActionResult Search(string searchstring)
@@ -51,7 +51,7 @@ namespace Sukiya.Controllers
             {
                 return View("Index", result.ToList().ToPagedList(1, 11));
             }
-            return HttpNotFound("Khong co thong tin tim kiem");
+            return HttpNotFound("Không tìm thấy món ăn này");
         }
     }
 }

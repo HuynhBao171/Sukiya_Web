@@ -4,46 +4,23 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
-
-<p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<div style="padding: 20px">
     @using (Html.BeginForm("Search", "Mons", FormMethod.Get))
 
     {
-        <input type="text" name="searchString" placeholder="Tìm kiếm Mon" />
+        <input type="text" name="searchString" placeholder="Tìm kiếm Món" />
         <input type="submit" value="Tìm Kiếm" />
     }
-</p>
-<br />
-<br />
-<br />
-<br />
+</div>
 
 <div class="row">
     @foreach (var item in Model)
     {
-        @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel panel-heading">
-                        <strong>@item.TenMon</strong>
-                        <div class="pull-right">
-                        </div>
-                    </div>
-                    <div class="panel-body">
-
-                        <p><strong>Thể loại: </strong>@item.LoaiMon.TenLoaiMon</p>
-                        <img src="@item.HinhAnh" style="width:280px; height:250px" />
-                    </div>
-                    <div class="panel-footer clearfix">
-                        <div class="pull-right">
-                            @Html.ActionLink("Chi tiết", "Details", "Mons", new { id = item.MaMon }, new
-                            {
-                            @class = "btn btn-default"
-                            })
-                        </div>
-                    </div>
-                </div>
-            </div>*@
-
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
             <div class="gallery-single fix">
                 <img src="@item.HinhAnh" style="width:280px; height:250px" class="img-fluid" alt="Image">
@@ -66,7 +43,7 @@
 </div>
 <br />
 
-    <a style="text-align: center; font-size: 20px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </a>
+<div style="text-align: center; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>
 
 
 
