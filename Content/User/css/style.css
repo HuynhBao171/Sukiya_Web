@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
 @import url('https://fonts.googleapis.com/css?family=Athiti:400,500,600');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600&display=swap');
 /*------------------------------------------------------------------
     IMPORT FILES
 -------------------------------------------------------------------*/
@@ -21,7 +21,7 @@
 body {
     color: #666666;
     font-size: 15px;
-    font-family: 'Athiti', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.80857;
 }
 
@@ -285,11 +285,11 @@ button:focus{
 	opacity: 0.5;
 }
 
-.cover-slides h1{
-	font-family: 'Arbutus Slab', serif;
-	font-weight: 500;
-	font-size: 64px;
-	color: #fff;
+.cover-slides h1 {
+    font-family: 'Raleway', serif;
+    font-weight: 500;
+    font-size: 64px;
+    color: #fff;
 }
 .cover-slides p{
 	font-size: 18px;
@@ -315,11 +315,11 @@ button:focus{
 	box-shadow: -10px -10px 0px #d0a772;
 }
 .inner-column{}
-.inner-column h1{
-	font-family: 'Arbutus Slab', serif;
-	font-size: 30px;
-	color: #010101;
-}
+    .inner-column h1 {
+        font-family: 'Raleway', serif;
+        font-size: 30px;
+        color: #010101;
+    }
 .inner-column h1 span{
 	color: #d0a772;
 }
@@ -350,14 +350,14 @@ button:focus{
 	background-position: center center;
 	position: relative;
 }
-.qt-background p {
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 44px;
-    color: #fff;
-	font-family: 'Arbutus Slab', serif;
-	margin-bottom: 20px;
-}
+    .qt-background p {
+        font-size: 35px;
+        font-weight: 300;
+        line-height: 44px;
+        color: #fff;
+        font-family: 'Raleway', serif;
+        margin-bottom: 20px;
+    }
 
 .qt-background span {
     color: #fff;
@@ -376,11 +376,11 @@ button:focus{
 .heading-title{
 	margin-bottom: 50px;
 }
-.heading-title h2{
-	color: #010101;
-	font-size: 28px;
-	font-family: 'Arbutus Slab', serif;
-}
+    .heading-title h2 {
+        color: #010101;
+        font-size: 28px;
+        font-family: 'Raleway', serif;
+    }
 .heading-title p{
 	font-size: 18px;
 	font-weight: 200;
@@ -435,12 +435,12 @@ button:focus{
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-.why-text h4{
-	color: #ffffff;
-	font-size: 24px;
-	font-weight: 500;
-	font-family: 'Arbutus Slab', serif;
-}
+    .why-text h4 {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: 'Raleway', serif;
+    }
 .why-text p{
 	color: #ffffff;
 	font-size: 18px;
@@ -765,11 +765,11 @@ button:focus{
 	z-index: 1;
 	opacity: 0.8;	
 }
-.all-page-title h1{
-	font-size: 38px;
-	color: #ffffff;
-	font-family: 'Arbutus Slab', serif;
-	padding: 0px;
+.all-page-title h1 {
+    font-size: 38px;
+    color: #ffffff;
+    font-family: 'Raleway', serif;
+    padding: 0px;
 }
 
 .inner-pt{
@@ -1326,7 +1326,6 @@ blockquote {
     transition: opacity 0.2s ease-out;
 	font-size: 30px;
 }
-
 
 
 

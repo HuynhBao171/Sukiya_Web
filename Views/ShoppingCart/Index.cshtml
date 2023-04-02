@@ -4,7 +4,16 @@
     Layout = "~/Views/Shared/_LayoutCard.cshtml";
 }
 
-<h2 style="text-align:center">THÔNG TIN GIỎ HÀNG</h2>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div class="inner-column">
+    <h1 style="padding: 30px"><span>Thông tin giỏ hàng.</span></h1>
+</div>
+<hr />
 <table align="center" border="1">
     <tr style="text-align:center; font-weight:bold">
         <td> Tên Mon </td>
@@ -20,7 +29,7 @@
     {
         <tr style="text-align:center; font-weight:bold">
             <td> @item.TenMon </td>
-            <td><img src="@item.HinhAnh" style="width:200px; height:300px" /></td>
+            <td><img src="@item.HinhAnh" style="flex:auto" /></td>
             @using (Html.BeginForm("UpdateCart", "ShoppingCart", new { id = item.MaMon }))
             {
                 <td>

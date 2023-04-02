@@ -3,73 +3,92 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
-<h2>Details</h2>
+<div class="row">
 
-<div>
-    <h4>Mon</h4>
-    <hr />
-    @*<dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.LoaiMon.TenLoaiMon)
-            </dt>
+    <div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-            <dd>
-                @Html.DisplayFor(model => model.LoaiMon.TenLoaiMon)
-            </dd>
+        <div class="inner-column">
+            <h1 style="padding: 30px"><span>Chi tiết món.</span></h1>
+        </div>
+        <hr />
+        @*<dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.LoaiMon.TenLoaiMon)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.TenMon)
-            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LoaiMon.TenLoaiMon)
+                </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.TenMon)
-            </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TenMon)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.Gia)
-            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.TenMon)
+                </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.Gia)
-            </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gia)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.MoTa)
-            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Gia)
+                </dd>
 
-            <dd>
-                @Html.DisplayFor(model => model.MoTa)
-            </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MoTa)
+                </dt>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.HinhAnh)
-            </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MoTa)
+                </dd>
 
-            <dd>
-                <img src="@Model.HinhAnh" style="width:200px; height:250px" />
-            </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.HinhAnh)
+                </dt>
 
-        </dl>*@
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel panel-heading">
-                <strong>@Html.DisplayNameFor(model => model.TenMon)</strong>
-                <div class="pull-right">
+                <dd>
+                    <img src="@Model.HinhAnh" style="width:200px; height:250px" />
+                </dd>
+
+            </dl>*@
+        @*<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        <strong>@Html.DisplayNameFor(model => model.TenMon)</strong>
+                        <div class="pull-left">
+                            <img src="@Model.HinhAnh" style="width:280px; height:250px" /
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p><strong>Thể loại: </strong>@Html.DisplayFor(model => model.LoaiMon.TenLoaiMon)</p>
+                    </div>
                 </div>
-            </div>
-            <div class="panel-body">
+            </div>*@
+        <div style="float: left; padding: 40px">
+            <img src="@Model.HinhAnh" style="width:280px; height:250px"
+        </div>
+        <div style="float: right">
+            <div style="float: left; padding: 40px">
                 <p><strong>Thể loại: </strong>@Html.DisplayFor(model => model.LoaiMon.TenLoaiMon)</p>
-                <img src="@Model.HinhAnh" style="width:200px; height:250px" />
+                <p><strong>Tên món: </strong>@Html.DisplayFor(model => model.TenMon)</p>
+                <p><strong>Giá: </strong>@Html.DisplayFor(model => model.Gia) đ</p>
+                <p><strong>Mô Tả: </strong>@Html.DisplayFor(model => model.MoTa)</p>
+
             </div>
+        </div>
+        <div style="padding: 30px">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.MaMon }, new { @class = "btn btn-primary font-weight-bold" }) ||
+            @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "ShoppingCart", new { id = Model.MaMon }, new { @class = "btn btn-primary font-weight-bold" }) ||
+            @Html.ActionLink("Back to List", "Index", new { id = Model.MaMon }, new { @class = "btn btn-primary font-weight-bold" })
         </div>
     </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMon }) ||
-    @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "ShoppingCart", new { id = Model.MaMon }, new
-    {
- @class = "btn btn-primary font-weight-bold"
-    })
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
 

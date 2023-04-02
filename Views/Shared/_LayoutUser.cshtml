@@ -53,7 +53,8 @@
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home",new { area = "" })">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area =""})">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Admin</a></li>
-                        <a href="@Url.Action("Index","ShoppingCart")"><strong>Cart</strong> <span id="cart-status" class="badge">@ViewBag.CartCount </span></a>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","ShoppingCart")">Giỏ hàng</a></li>
+                     @*   <a href="@Url.Action("Index","ShoppingCart")"><strong>Cart</strong> <span id="cart-status" class="badge">@ViewBag.CartCount </span></a>*@
                         @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Login</a></li>
         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Register</a></li>*@
                         @Html.Partial("_LoginPartial")
