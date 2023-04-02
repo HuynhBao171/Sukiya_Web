@@ -6,16 +6,18 @@
     {
         @Html.AntiForgeryToken()
 
-<ul class="nav navbar-nav navbar-right">
-    <li>
-        @Html.ActionLink("Xin Chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-    </li>
-    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
-</ul>
+
+    <ul class="navbar-nav ml-auto">
+        <li
+            class="nav-item"><a class="nav-link" @Html.ActionLink("Xin Chào " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li  class="nav-item"><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
     }
-}
-else
-{
+    }
+    else
+    {
     <li class="nav-item"><a class="nav-link" @Html.ActionLink("Đăng kí", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
     <li class="nav-item"><a class="nav-link" @Html.ActionLink("Đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-}
+    }
+
