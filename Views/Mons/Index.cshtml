@@ -17,6 +17,9 @@
         <input type="submit" value="Tìm Kiếm" />
     }
 </div>
+<div id="content-top" class="col-2 col-lg-2">
+    @Html.Action("GetCategory", "Mons")
+</div>
 <div class="row">
     @foreach (var item in Model)
     {
@@ -28,6 +31,10 @@
                     <p><strong>Thể loại: </strong>@item.LoaiMon.TenLoaiMon</p>
                     <div class="panel-footer clearfix">
                         <div class="pull-right">
+                            @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "ShoppingCart", new { id = item.MaMon }, new
+                       {
+                           @class = "btn btn-default"
+                       }) ||
                             @Html.ActionLink("Chi tiết", "Details", "Mons", new { id = item.MaMon }, new
                             {
                             @class = "btn btn-default"

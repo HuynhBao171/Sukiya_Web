@@ -252,6 +252,12 @@
     <Content Include="Content\image\7.png" />
     <Content Include="Content\image\8.png" />
     <Content Include="Content\image\9.png" />
+    <Content Include="Content\image\99.png" />
+    <Content Include="Content\image\999.jpg" />
+    <Content Include="Content\image\9999.jpg" />
+    <Content Include="Content\image\99999.jpg" />
+    <Content Include="Content\image\999999.jpg" />
+    <Content Include="Content\image\9999999.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\User\css\animate.css" />
     <Content Include="Content\User\css\baguetteBox.min.css" />

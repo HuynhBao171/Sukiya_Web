@@ -6,6 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using System.Web.UI;
 using Sukiya.Models;
 
 namespace Sukiya.Areas.Admin.Controllers
@@ -16,10 +18,12 @@ namespace Sukiya.Areas.Admin.Controllers
 
         // GET: Admin/Mons
         [Authorize(Roles = "Admin")]
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var mon = db.Mon.Include(m => m.LoaiMon);
-            return View(mon.ToList());
+            int pageSize = 9;
+            int pageIndex = page == null ? 1 : page.Value;
+            var listProduct = db.Mon.Include(p => p.LoaiMon).ToList().ToPagedList(pageIndex, pageSize);
+            return View(listProduct);
         }
 
         public ActionResult Index1()

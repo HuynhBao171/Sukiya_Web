@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Sukiya.Models.Mon>
-
+﻿@model PagedList.IPagedList<Sukiya.Models.Mon>
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -11,19 +11,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.LoaiMon.TenLoaiMon)
+            Loại Món
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TenMon)
+            Tên Món
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gia)
+            Giá
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MoTa)
+           Mô Tả
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.HinhAnh)
+            Hình Ảnh
         </th>
         <th></th>
     </tr>
@@ -56,4 +56,5 @@
 
 </table>
 
+<div style="text-align: center; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>
 
