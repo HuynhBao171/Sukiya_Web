@@ -4,57 +4,97 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Loại Món
+            </th>
+            <th>
+                Tên Món
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+               Mô Tả
+            </th>
+            <th>
+                Hình Ảnh
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            Loại Món
-        </th>
-        <th>
-            Tên Món
-        </th>
-        <th>
-            Giá
-        </th>
-        <th>
-           Mô Tả
-        </th>
-        <th>
-            Hình Ảnh
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiMon.TenLoaiMon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenMon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    <img src="@item.HinhAnh" style="width:200px; height:250px" />
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaMon }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaMon }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaMon })
+                </td>
+            </tr>
+        }
 
+    </table>
+
+
+    <div style="text-align: center; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>*@
+
+<h3>@Html.ActionLink("Thêm mới", "Create", "Mons")</h3>
+<div class="row">
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.LoaiMon.TenLoaiMon)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenMon)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTa)
-            </td>
-            <td>
-                <img src="@item.HinhAnh" style="width:200px; height:250px" />
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MaMon }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MaMon }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MaMon })
-            </td>
-        </tr>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">
+                    <strong>@item.TenMon</strong>
+                    <div class="pull-right">
+                        @Html.ActionLink("Chỉnh Sửa", "Edit", "Mons", new { id = item.MaMon }, new
+                        {
+                            @class =
+                        "btn"
+                        })
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p><strong>Loại Món: </strong>@item.LoaiMon.TenLoaiMon</p>
+                    <p><strong>Mô Tả: </strong>@item.MoTa</p>
+                    <img style="align-self:center;" alt="@item.TenMon"
+                         src="@item.HinhAnh" width="125" height="150" />
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        @Html.ActionLink("Chi tiết", "Details", "Mons", new { id = item.MaMon }, new
+                        {
+                        @class = "btn btn-default"
+                        })
+                        @Html.ActionLink("Xóa", "Delete", "Mons", new { id = item.MaMon }, new
+                        {
+                            @class =
+                        "btn btn-success"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
     }
-
-</table>
-
+</div>
 <div style="text-align: center; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>
-

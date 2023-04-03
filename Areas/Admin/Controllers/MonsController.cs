@@ -20,7 +20,7 @@ namespace Sukiya.Areas.Admin.Controllers
         [Authorize(Roles = "Admin")]
         public ActionResult Index(int? page)
         {
-            int pageSize = 9;
+            int pageSize = 6;
             int pageIndex = page == null ? 1 : page.Value;
             var listProduct = db.Mon.Include(p => p.LoaiMon).ToList().ToPagedList(pageIndex, pageSize);
             return View(listProduct);
