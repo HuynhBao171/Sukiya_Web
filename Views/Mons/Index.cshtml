@@ -9,15 +9,8 @@
 <br />
 <br />
 <br />
-<div style="padding: 20px">
-    @using (Html.BeginForm("Search", "Mons", FormMethod.Get))
 
-    {
-        <input type="text" name="searchString" placeholder="Tìm kiếm Món" />
-        <input type="submit" value="Tìm Kiếm" />
-    }
-</div>
-<div id="content-top" class="col-2 col-lg-2"> 
+<div> 
     @Html.Action("GetCategory", "Mons")
 </div>
 <div class="row">

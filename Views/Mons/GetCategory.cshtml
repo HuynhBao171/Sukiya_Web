@@ -1,9 +1,33 @@
 ﻿@model IEnumerable<Sukiya.Models.LoaiMon>
-<h1>Loại Món</h1>
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@Html.ActionLink(item.TenLoaiMon, "GetFoodByCategory/" + item.MaLoaiMon, "Mons")</li>
-    }
-</ul>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="heading-title text-center">
+            <div class="inner-column">
+                <div style="padding: 20px">
+                    @using (Html.BeginForm("Search", "Mons", FormMethod.Get))
+                    {
+                        <input required="" id="inputSearchAuto" name="searchString" maxlength="40" autocomplete="off" class="searchinput" type="text" size="60" placeholder="Tìm món yêu thích tại đây..." aria-label="Search">
+                        <input type="submit" alt="Go" id="go" />
+                    }
+                </div>
+                <h1 style="padding: 30px; font-size:36px"><span>CHỌN MÓN NGAY NÀO!.</span></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="special-menu text-center">
+                        <div class="button-group filter-button-group">
+                            @foreach (var item in Model)
+                            {
+                                <button class="active">@Html.ActionLink(item.TenLoaiMon, "GetFoodByCategory/" + item.MaLoaiMon, "Mons")</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 

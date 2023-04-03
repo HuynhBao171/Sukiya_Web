@@ -1326,7 +1326,21 @@ blockquote {
     transition: opacity 0.2s ease-out;
 	font-size: 30px;
 }
+#go {
+    width: 35px;
+    height: 35px;
+    background: url(//theme.hstatic.net/200000392523/1000896443/14/iconsearch.png?v=66) #252a2b center no-repeat;
+    margin: 0;
+    position: relative;
+    top: 0;
+    border-radius: 3px;
+    font-size: 0;
+    border: 0;
+}
 
+.searchinput {
+    margin: 0 0 2px 0;
+}
 
 
 
