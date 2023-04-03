@@ -34,10 +34,9 @@
                 </button>
                 <a class="navbar-brand" href="@Url.Action("Index","Home",new { area = "" })">Quay lại</a>
             </div>
-            <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 2 April 2023 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+            <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+            </div>
         </nav>
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
