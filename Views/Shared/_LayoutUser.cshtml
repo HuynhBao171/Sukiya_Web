@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
 <head>
@@ -42,7 +43,7 @@
     <header class="top-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" >
+                <a class="navbar-brand">
                     <img src="~/Content/User/images/logo.png" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +53,17 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home",new { area = "" })">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area =""})">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Admin</a></li>
+                        @*<li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Admin</a></li>*@
+                        @if (Request.IsAuthenticated)
+                        {
+                        {
+                        @Html.AntiForgeryToken()
+                    <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Mons",new{area ="Admin"})">Admin</a></li>
+                        }
+                        }
+                        else
+                        {
+                        }
                         <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","ShoppingCart")">Giỏ hàng</a></li>
                         @Html.Partial("_LoginPartial")
                     </ul>
@@ -120,7 +131,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3>Subscribe</h3>
-                    
+
                     <ul class="list-inline f-social">
                         <li class="list-inline-item"><a href="https://www.facebook.com/sukiyavn"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li class="list-inline-item"><a href="https://www.youtube.com/watch?v=jZRbaHIdSmw"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
