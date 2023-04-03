@@ -342,13 +342,13 @@ button:focus{
 -------------------------------------------------------------------*/
 
 
-.qt-background{
-	background: url(../images/qt-bg.jpg) no-repeat;
-	background-size: cover;
-	padding: 100px 0;
-	background-attachment: fixed;
-	background-position: center center;
-	position: relative;
+.qt-background {
+    background: url(../images/qt-bg-1.jpg) no-repeat;
+    background-size: auto;
+    padding: 100px 0;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
 }
     .qt-background p {
         font-size: 35px;
