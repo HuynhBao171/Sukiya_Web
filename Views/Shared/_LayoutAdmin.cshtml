@@ -1,4 +1,4 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -60,8 +60,7 @@ font-size: 16px;"> Last access : 2 April 2023 &nbsp; <a href="#" class="btn btn-
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Admin Dashboard</h2>
-                        <h5>Welcome Hoang , Love to see you back. </h5>
+                        <h5 style="font-size:30px">@Html.Name("Xin Chào " + User.Identity.GetUserName())</h5>
                     </div>
                 </div>
                 <!-- /. ROW  -->
