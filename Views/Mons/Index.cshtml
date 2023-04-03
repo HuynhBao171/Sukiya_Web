@@ -21,7 +21,10 @@
                 <img src="@item.HinhAnh" style="width:280px; height:250px" class="img-fluid" alt="Image">
                 <div class="why-text">
                     <h4>@item.TenMon</h4>
-                    <p><strong>Thể loại: </strong>@item.LoaiMon.TenLoaiMon</p>
+                    <p><strong>Loại món: </strong>@item.LoaiMon.TenLoaiMon</p>
+                    <div style="color:white; font-size:20px"><strong style="float:right">Giá: @item.Gia đ</strong></div>
+                    <br />
+                    <br />
                     <div class="panel-footer clearfix">
                         <div class="pull-right">
                             @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "ShoppingCart", new { id = item.MaMon }, new
@@ -34,7 +37,6 @@
                             })
                         </div>
                     </div>
-                    <p><strong>Giá: </strong>@item.Gia đ </p>
                 </div>
             </div>
         </div>
