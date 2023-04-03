@@ -66,23 +66,20 @@
             <div class="panel panel-default">
                 <div class="panel panel-heading">
                     <strong>@item.TenMon</strong>
-                    <div class="pull-right">
-                        @Html.ActionLink("Chỉnh Sửa", "Edit", "Mons", new { id = item.MaMon }, new
-                        {
-                            @class =
-                        "btn"
-                        })
-                    </div>
                 </div>
                 <div class="panel-body">
                     <p><strong>Loại Món: </strong>@item.LoaiMon.TenLoaiMon</p>
                     <p><strong>Mô Tả: </strong>@item.MoTa</p>
-                    <img style="align-self:center;" alt="@item.TenMon"
-                         src="@item.HinhAnh" width="125" height="150" />
+                    <img style="align-self:center; width:auto " alt="@item.TenMon"
+                         src="@item.HinhAnh" height="150" />
                 </div>
                 <div class="panel-footer clearfix">
                     <div class="pull-right">
                         @Html.ActionLink("Chi tiết", "Details", "Mons", new { id = item.MaMon }, new
+                        {
+                        @class = "btn btn-default"
+                        })
+                        @Html.ActionLink("Chỉnh Sửa", "Edit", "Mons", new { id = item.MaMon }, new
                         {
                         @class = "btn btn-default"
                         })
