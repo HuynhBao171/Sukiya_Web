@@ -1,17 +1,14 @@
 ﻿@model Sukiya.Models.LoaiMon
-
 @{
     ViewBag.Title = "Edit";
-    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>Edit</h2>
-
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>LoaiMon</h4>
         <hr />
@@ -32,12 +29,4 @@
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }
