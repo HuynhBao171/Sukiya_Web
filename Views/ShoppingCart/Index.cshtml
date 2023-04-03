@@ -36,9 +36,9 @@
                 </td>
                 <td> @String.Format("{0:0,0}", item.Gia) </td>
                 <td> @String.Format("{0:0,0}", item.SoLuong) </td>
-                <td><a href="@Url.Action("Details","Mons",new { id = item.MaMon })" class="btn btn-primary"> Chi tiết </a></td>
-                <td> @Html.ActionLink("Xóa", "RemoveCartItem", new { id = item.MaMon })</td>
-                <td> <input type="submit" value="Cập nhật" style="height: 50px; width: 150px; background-color: green; color:white; padding-bottom: 5px; padding-top:5px"/></td>
+                <td><a href="@Url.Action("Details","Mons",new { id = item.MaMon } )" class="btn btn-primary font-weight-bold"> Chi tiết </a></td>
+                <td> @Html.ActionLink("Xóa", "RemoveCartItem", new { id = item.MaMon }, new { @class = "btn btn-primary font-weight-bold" })</td>
+                <td> <input type="submit" value="Cập nhật"  class="btn btn-primary font-weight-bold"/></td>
             }
         </tr>
     }

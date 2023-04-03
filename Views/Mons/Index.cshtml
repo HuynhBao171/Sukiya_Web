@@ -42,9 +42,4 @@
 </div>
 <br />
 
-<div style="text-align: center; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>
-
-
-
-
-
+<div style="padding: 30px; font-size: 40px" @Html.PagedListPager(Model, page => Url.Action("Index", new { page })) </div>
