@@ -13,12 +13,12 @@
 <div>
     @Html.Action("GetCategory", "Mons")
 </div>
-<div class="row" style="padding:10px">
+<div class="row" style="padding:30px">
     @foreach (var item in Model)
     {
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
             <div class="gallery-single fix">
-                <img src="@item.HinhAnh" style="width: auto; height: 250px" class="img-fluid" alt="Image">
+                <img src="@item.HinhAnh" class="img-fluid" alt="Image">
                 <div class="why-text">
                     <h4>@item.TenMon</h4>
                     <p><strong>Loại món: </strong>@item.LoaiMon.TenLoaiMon</p>
