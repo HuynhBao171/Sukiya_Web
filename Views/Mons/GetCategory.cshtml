@@ -24,7 +24,7 @@
                         <div class="button-group filter-button-group">
                             @foreach (var item in Model)
                             {
-                                <button class >@Html.ActionLink(item.TenLoaiMon, "GetFoodByCategory/" + item.MaLoaiMon, "Mons")</button>
+                                <button>@Html.ActionLink(item.TenLoaiMon, "GetFoodByCategory/" + item.MaLoaiMon, "Mons")</button>
                             }
                         </div>
                     </div>
