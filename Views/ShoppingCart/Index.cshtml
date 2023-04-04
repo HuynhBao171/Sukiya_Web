@@ -13,49 +13,54 @@
     <h1 style="padding: 30px; text-align: center; "><span>Thông tin giỏ hàng</span></h1>
 </div>
 <hr />
-<table align="center" border="1">
-    <tr style="text-align:center; font-weight:bold">
-        <td> Tên món </td>
-        <td> Ảnh bìa </td>
-        <td> Số lượng </td>
-        <td> Đơn giá </td>
-        <td> Thành tiền </td>
-        <td width="50px"></td>
-        <td width="50px"></td>
-        <td width="50px"></td>
-    </tr>
+<header id="site-header">
+    <div class="container">
+    </div>
+</header>
+<div class="container">
     @foreach (var item in Model)
     {
-        <tr style="text-align:center; font-weight:bold">
-            <td> @item.TenMon </td>
-            <td><img src="@item.HinhAnh" style="flex:auto; width: 300px; height: 300px" /></td>
-            @using (Html.BeginForm("UpdateCart", "ShoppingCart", new { id = item.MaMon }))
-            {
-                <td>
-                    <input type="number" min="1" name="txtQuantity" value="@item.SoLuong" style="" />
-                </td>
-                <td> @String.Format("{0:0,0}", item.Gia) </td>
-                <td> @String.Format("{0:0,0}", item.SoLuong) </td>
-                <td><a href="@Url.Action("Details","Mons",new { id = item.MaMon } )" class="btn btn-primary font-weight-bold"> Chi tiết </a></td>
-                <td> @Html.ActionLink("Xóa", "RemoveCartItem", new { id = item.MaMon }, new { @class = "btn btn-primary font-weight-bold" })</td>
-                <td> <input type="submit" value="Cập nhật"  class="btn btn-primary font-weight-bold"/></td>
-            }
-        </tr>
-    }
+        <section id="cart">
+            <article class="product">
+                <header>
+                    <a class="remove">
+                        <img src="@item.HinhAnh" style="flex: auto; width: 240px; height: auto " />
 
-    <tr style="font-weight:bold; text-align:right; color:red">
-        <td colspan="5"> Số lượng món:  @ViewBag.Tongsoluong </td>
-        <td colspan="5"> Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</td>
-    </tr>
-    <tr style="font-weight:bold; color:blue; text-align:right">
-        <td colspan="9" align="center" style="padding: 30px; ">
-            @Html.ActionLink("Xóa Giỏ Hàng", "RemoveCart")
-        </td>
-    </tr>
-    <tr style="font-size: 24px ; font-weight:bold; color: blue; text-align: right";>
-        <td colspan="9" align="center" style="padding: 50px; ">
-            @Html.ActionLink("ĐẶT HÀNG", "Order", "ShoppingCart")
-        </td>
-    </tr>
-</table>
+                        <h3>@Html.ActionLink("Xóa", "RemoveCartItem", new { id = item.MaMon }, new { @class = "btn1 btn-primary font-weight-bold" })</h3>
+                    </a>
+                </header>
+
+                <div class="content">
+
+                    <h1>@item.TenMon</h1>
+
+                </div>
+
+                <footer class="content">
+                    <input type="number" min="1" name="txtQuantity" value="@item.SoLuong" style="" />
+                    <h2 class="full-price">
+                        @String.Format("{0:0,0}", item.SoLuong * item.Gia)
+                    </h2>
+
+                    <h2 class="price">
+                        Đơn giá: @String.Format("{0:0,0}", item.Gia)
+                    </h2>
+                </footer>
+            </article>
+        </section>
+    }
+    </div>
+   
+<footer id="site-footer">
+    <div class="container clearfix">
+        <input type="submit" value="Cập nhật" class="btn btn-primary font-weight-bold" />
+        <div class="right">
+            <h1 class="total">Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ</h1>
+            <a> @Html.ActionLink("ĐẶT HÀNG", "Order", "ShoppingCart") </a>
+            <br />
+            <a> @Html.ActionLink("XÓA GIỎ HÀNG", "RemoveCart")</a>
+        </div>
+
+    </div>
+</footer>
 
