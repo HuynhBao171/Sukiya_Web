@@ -7,7 +7,7 @@
 <h2>Các loại món</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Tạo Loại Món", "Create")
 </p>
 <table class="table">
     <tr>
@@ -24,9 +24,9 @@
                 @Html.DisplayFor(modelItem => item.TenLoaiMon)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MaLoaiMon }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MaLoaiMon }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MaLoaiMon })
+                @Html.ActionLink("Chỉnh Sửa", "Edit", new { id = item.MaLoaiMon }) |
+                @Html.ActionLink("Chi Tiết", "Details", new { id = item.MaLoaiMon }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MaLoaiMon })
             </td>
         </tr>
     }
